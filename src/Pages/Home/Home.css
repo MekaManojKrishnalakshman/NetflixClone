@@ -1,61 +1,81 @@
-.hero{
-    position: relative;
-}
-.banner-image{
-    width:100%;
-    mask-image: linear-gradient(to right ,transparent,black 75%);
-    -weblit-mask-image: linear-gradient(to right ,transparent,black 75%);
-
-}
-.hero-caption{
-    position: absolute;
-    width:100%;
-    padding-left: 6%;
-    bottom:0;
-}
-.caption-image{
-    width:90%;
-    max-width: 420px;
-    margin-bottom:20px;
-}
-.hero-caption p{
-    max-width: 700px;
-    font-size: 17px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-.hero-btn{
-    display: flex;
-    gap: 10px;
-    margin-bottom:50px;
-}
-.hero-btn button img{
-    width: 20px;
-}
-.hero-btn button{
-
-    border:0;
-    outline:0;
-    padding: 8px 20px;
-    display:inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size:15px;
-    font-weight:600;
-    background-color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.hero-btn button.info {
-    color: #fff;
-    background: #6d6d6eb3;
-}
-.hero-btn button:hover{
-    opacity: 0.8;
-}
-.more-cards{
-    padding-left:6%;
-    
-   
+/* General Styles */
+.home {
+  font-family: 'Arial, sans-serif';
+  color: #333333; 
+  background-color: #FFD700; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  padding-top: 70px; /* Adjust padding-top to account for navbar height */
 }
 
+
+.hero {
+  position: relative;
+  text-align: left;
+  color: #333333; /* Charcoal text color */
+  padding: 30px 20px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 40px; /* Position caption to the left with spacing */
+  transform: translateY(-50%);
+  text-align: left;
+  max-width: 600px; /* Limit width for better readability */
+}
+
+.caption-image {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.hero-caption p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px; /* Reduced gap for a tighter look */
+}
+
+.play-btn, .info-btn {
+  background-color: #FFFFFF; /* White background */
+  border: 1px solid #CCCCCC; /* Light border */
+  color: #333333; /* Charcoal text color */
+  padding: 8px 16px; /* Reduced padding for smaller size */
+  font-size: 14px; /* Smaller font size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 3px; /* Slightly rounded corners */
+}
+
+.play-btn img, .info-btn img {
+  filter: brightness(0) invert(0); /* Dark icons for light background */
+  margin-right: 8px; /* Adjusted margin for smaller size */
+  width: 16px; /* Reduced icon size */
+}
+
+.play-btn:hover, .info-btn:hover {
+  background-color: #F0F0F0; /* Slightly darker background on hover */
+  border-color: #999999; /* Darker border color on hover */
+}
+
+/* More Cards Section */
+.more-cards {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}

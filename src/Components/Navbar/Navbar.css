@@ -1,68 +1,85 @@
-.navbar{
-    width:100%;
-    padding:20px 6%;
+.navbar {
+    width: 100%;
+    height: 70px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
-    font-size: 20px;
-    background-image: linear-gradient(180deg,rgba(0,0,0,0.7) 10%,transparent);
+    top: 0;
+    font-size: 16px;
+    background: #FFD700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow for light theme */
     z-index: 1;
-}
-.navbar-left{
+  }
+  
+  .navbar-left {
     display: flex;
     align-items: center;
-    gap: 40px;
-}
-.navbar-left img{
-    width: 120px;
-}
-.navbar-left ul{
+    gap: 30px; /* Adjusted gap */
+  }
+  
+  .navbar-left img {
+    width: 90px;
+  }
+  
+  .navbar-left ul {
     display: flex;
     list-style: none;
     gap: 20px;
-    font-size: 15px;
-}
-.navbar-left ul li{
-    cursor: pointer; }
-
-.navbar-right{
+    font-size: 14px;
+  }
+  
+  .navbar-left ul li {
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+    padding-bottom: 5px;
+  }
+  
+  .navbar-left ul li:hover {
+    color: #00A3E0; /* Deep Sky Blue */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+  }
+  
+  .navbar-right {
     display: flex;
-    gap:10px;
+    gap: 15px; /* Adjusted gap */
     align-items: center;
-}
-.navbar-right .icons{
-    width: 20px;
-    cursor:pointer;
-    
-}
-.navbar-right .profile{
-    width:35px; 
-    border-radius: 4px;
-}
-.navbar-profile{
+  }
+  
+  .navbar-right .icons {
+    width: 24px; /* Adjusted icon size */
+    cursor: pointer;
+    filter: invert(0%); /* Dark icons for light theme */
+  }
+  
+  .navbar-profile {
     display: flex;
     align-items: center;
     gap: 10px;
-    cursor:pointer;
+    cursor: pointer;
     position: relative;
-}
-.profile-dropdown{
+  }
+  
+  .profile-dropdown {
     position: absolute;
-    top: 40px;
-    right:0;
-    width:max-content;
-    background: #191919;
-    padding:18px 22px ;
-    border-radius: 2px;
-    text-decoration: underline;
+    top: 35px;
+    right: 0;
+    width: max-content;
+    background: #FFFFFF; /* White background */
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
     z-index: 1;
-    display:none;
-}
-.profile-dropdown p{
-    font-size: 13px;
-    
-    cursor:pointer;
-}
-.navbar-profile:hover .profile-dropdown{
+    display: none;
+    color: #333333; /* Charcoal text color */
+  }
+  
+  .profile-dropdown p {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .navbar-profile:hover .profile-dropdown {
     display: block;
-}
+  }
+  
